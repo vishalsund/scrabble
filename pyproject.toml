@@ -1,0 +1,22 @@
+[project]
+name = "scrabble"
+version = "0.1.0"
+description = "Scrabble games and reinforcement learning experiments"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "numba",
+    "torch",
+    "wandb>=0.30.0",
+    "mlx>=0.32.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

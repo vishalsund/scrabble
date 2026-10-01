@@ -1,0 +1,95 @@
+"""Mini-Scrabble v1, a two-player game an agent can play.
+
+A 5×5 board, letters A–D, racks of three, and the 68-word dictionary in
+:mod:`scrabble.games.mini_scrabble.rules`. :class:`MiniScrabbleEnv` steps
+many games at once. There is no solver in this package. Keep learning
+algorithms outside it.
+
+Play by hand with ``python -m scrabble.games.mini_scrabble.gui``.
+"""
+
+from scrabble.games.mini_scrabble.env import MiniScrabbleEnv
+from scrabble.games.mini_scrabble.play import (
+    GLOBAL_DIM,
+    INPUT_DIM,
+    MOVES,
+    PASS_MOVE,
+    Move,
+    State,
+    apply_move,
+    apply_move_without_draw,
+    deal,
+    draw_tiles,
+    encode,
+    encode_env,
+    encode_spatial,
+    legal_moves,
+    result,
+    score_placement,
+)
+from scrabble.games.mini_scrabble.rules import (
+    BAG,
+    BOARD,
+    BOARD_SIZE,
+    CENTER,
+    COPIES_PER_LETTER,
+    LETTERS,
+    N_ACTIONS,
+    N_LETTERS,
+    N_PLAYERS,
+    N_SQUARES,
+    OBS_SIZE,
+    OPENED,
+    PASS,
+    PASSES,
+    PLAYER,
+    RACK,
+    RACK_SIZE,
+    action_for,
+    action_name,
+    format_board,
+    is_legal_word,
+    parse_board,
+)
+
+__all__ = [
+    "BAG",
+    "BOARD",
+    "BOARD_SIZE",
+    "CENTER",
+    "COPIES_PER_LETTER",
+    "GLOBAL_DIM",
+    "INPUT_DIM",
+    "LETTERS",
+    "MOVES",
+    "MiniScrabbleEnv",
+    "Move",
+    "N_ACTIONS",
+    "N_LETTERS",
+    "N_PLAYERS",
+    "N_SQUARES",
+    "OBS_SIZE",
+    "OPENED",
+    "PASS",
+    "PASS_MOVE",
+    "PASSES",
+    "PLAYER",
+    "RACK",
+    "RACK_SIZE",
+    "State",
+    "action_for",
+    "action_name",
+    "apply_move",
+    "apply_move_without_draw",
+    "deal",
+    "draw_tiles",
+    "encode",
+    "encode_env",
+    "encode_spatial",
+    "format_board",
+    "is_legal_word",
+    "legal_moves",
+    "parse_board",
+    "result",
+    "score_placement",
+]
